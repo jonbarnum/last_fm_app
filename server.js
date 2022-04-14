@@ -23,7 +23,7 @@ mongoose.connect(
 )
 
 
-app.use('/bands', require('../routes/bandRouter.js'))
+app.use('/bands', require('./routes/bandRouter.js'))
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 
