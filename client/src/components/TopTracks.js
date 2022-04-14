@@ -5,7 +5,7 @@ function TopTracks(){
     const [topTracks, setTopTracks] = useState([])
 
     function getTopTracks(){
-        axios.get(`http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=cb41d576aa71567c76b75feab99d7dcd&format=json`)
+        axios.get(`https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=cb41d576aa71567c76b75feab99d7dcd&format=json`)
         .then(response => {
             setTopTracks(response.data.tracks.track)
         })
