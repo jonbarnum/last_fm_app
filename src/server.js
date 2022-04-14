@@ -32,12 +32,12 @@ app.use((err, req, res, next) => {
     return res.send({errMsg: err.message})
 })
 
-app.use((req, res, next) => {
-    res.set('Cache-Control', 'no-store')
-    next()
-})
+// app.use((req, res, next) => {
+//     res.set('Cache-Control', 'no-store')
+//     next()
+// })
 
-app.set('etag', false)
+// app.set('etag', false)
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
